@@ -1,0 +1,45 @@
+/* table4.css */
+.house{
+  border-collapse:collapse;
+}
+
+.house tr th{
+  background-color:navy;
+  color:white;
+}
+.dateCell{
+  background-color:#9FC93C;
+}
+.incomeCell{
+  background-color:green;
+}
+.expenseCell{
+  background-color:red;
+}
+.date , .dateCell{
+  width:75px;
+}
+.detail , .detailCell{
+  width:250px;
+}
+.income , .incomeCell{
+  width:150px;
+  text-align:center;
+}
+.expense , .expenseCell{
+  width:150px;
+  text-align:center;
+}
+.expenseCell{
+  color:white;
+}
+.payment , .paymentCell{
+  width:150px
+}
+.paymentCell{
+  width:150px;
+  text-align:center;
+}
+.detailCell:hover{
+  background-color:gray;
+}
