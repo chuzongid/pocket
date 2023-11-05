@@ -1,0 +1,32 @@
+.box  tr th{
+    border-bottom:3px solid black;
+}
+.num{
+    width:50px;
+    height:40px;
+}
+.name{
+    width:150px;
+}
+.score{
+    width:50px;
+}
+.rank{
+    width:40px;
+}
+.box tr td{
+    text-align:center;
+    height:30px;
+    border-bottom:1px solid #bbb;
+}
+
+.nameTd{
+    font-weight:800;
+}
+.nameTd:hover{
+    background-color:cadetblue;
+    color:#fff
+}
+.rankTd{
+    color:red;
+}

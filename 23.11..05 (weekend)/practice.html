@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework</title>
+    <title>Document</title>\
 
     <style>
-        
-        table{
-            border-collapse:collapse;
+        .box{
             width:1000px;
-            height:800px; 
+            height:800px;
+            border-collapse:collapse;
         }
         .oneLine td{
-            border:3px solid black;
+            border:3px solid red;
         }
         .twoLine td{
             border:1px solid black;
@@ -25,45 +24,41 @@
         .two{
             width:600px;
         }
-
         .three{
             width:200px;
         }
-        
         .four{
             width:400px;
-            height:640px;
-            background-color:bisque
+            background-color:red;
         }
         .five{
             width:400px;
             background-color:pink;
         }
-        .six{    
+        .six{
             width:200px;
-            background-color:aqua
+            background-color:skyblue;
         }
-
-
-
+        
     </style>
 </head>
 <body>
-    <table>
+    <table class="box">
         <tr class="oneLine">
             <td class="one"></td>
-            <td class="two"colspan="3"></td>
-            <td class="three"></td>
+
+            <td class="two" colspan="3"></td>
+            
+            <td class="three" width="200px"></td>
         </tr>
         <tr class="twoLine">
             <td class="four" colspan="2"></td>
+            
             <td class="five" colspan="2"></td>
+            
             <td class="six"></td>
         </tr>
-
-    
-
-
     </table>
+    
 </body>
 </html>

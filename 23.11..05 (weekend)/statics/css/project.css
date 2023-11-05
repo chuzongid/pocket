@@ -1,0 +1,28 @@
+.box{
+    width:1400px;
+    height:800px;
+    border-collapse:collapse;
+}
+.box tr td{
+    border:1px solid black;
+}
+.locker{
+    width:200px;
+    height:200px;
+    background-color:beige;
+}
+.bookShelf{
+    background-color:orange;
+    width:400;
+    height:200;
+}
+.cleaningToolBox{
+    background-color:red;
+    width:200;
+    height:600;
+}
+.locker i{
+    font-size:50px;
+    text-align:center;
+}
+

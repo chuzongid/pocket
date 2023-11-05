@@ -1,0 +1,64 @@
+body{
+    background-color:orange;
+    margin:0;
+}
+#wrap{
+    width:1200px;
+    border-collapse:collapse;
+    margin:20px auto;
+}
+#wrap tr td{
+    /*border:1px solid #000;*/
+}
+
+#header{
+    background-color:#fff;
+    height:80px;
+    width:100%;
+    font-weight:800;
+    font-size:19px;
+    border-radius:10px;
+}
+#slideWrap{
+    width:600px;
+    height:700px;
+}
+#drinkWrap{
+    width:600px;
+    height:350px;
+}
+#eventWrap{
+    height:350px;
+}
+.menuitem{
+    padding-left:50px;
+}
+.slide{width:100%}
+.leftMove, .rightMove{
+    width:50px;
+    font-size:30px;
+    text-align:center;
+    color:#fff
+}
+.leftMove i:hover ,.rightMove i:hover{
+    cursor:pointer;
+}
+.
+.slideImage{
+    width:500px;
+}
+.slideImage img{
+    width:100%;
+}
+.drinkMenu{
+    list-style:none;
+    font-size:20px;
+    font-weight:800;
+}
+.drinkMenu li{
+    height:35px;
+    border-bottom:1px solid #ffe;
+    width:150px;
+    cursor:pointer;
+}
+
