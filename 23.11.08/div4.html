@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display</title>
+
+  <style>
+    #box1{
+      background-color:pink;
+      width:500px;
+      /* height:50px; */
+      padding:15px 0;
+    }
+    #bold{
+      background:yellow; 
+      width:200px;
+      height:100px;
+      display:none; /*평상시b태그는 display:inline , display:block을 가진 태그는 옆에 아무것도 못뜨게한다.inline과 block두가지특성을 가진 inline-block사용*.none은 사라진다.*/
+    }
+    .menu{
+      padding:0 20px;
+      /*width:200px;
+      height:1000px; display:inline에서는 너비와 높이가 적용되지않는다.*/
+    }
+    #box2{
+      width:800px;
+      background-color:lightblue;
+      color:blue;
+    }
+    .menuList{
+      list-style-type:none;
+      margin:0;
+      padding:0; 
+      display:flex;
+    }
+    .menuList li{
+    /*display:inline; display:list-item속성이 사라지면서 li태그는 ul태그에 영향을 끼치지않는다.따라서 li태그 패딩을 해도 ul태그의 높이는 영향을 받지않는다.*/
+    /*float:left; fixed와 같은성질.순서에서 빠져서 li태그 상위태그인 div태그나 ul태그에 높이를 줘야한다.*/
+      padding:15px 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+  <div id="box1">
+    <span class="menu">HOME</span>
+    <span class="menu">자동차</span>
+    <span class="menu">스포츠</span>
+    <span class="menu">영화</span>
+    <span class="menu">웹툰</span>
+  </div>
+  <h3>나는 헤드라인</h3>
+  <b id="bold">굵은글씨 </b>
+  <i>테스트</i>
+
+  <div id="box2">
+    <ul class="menuList">
+      <li>HOME</li>
+      <li>자동차</li>
+      <li>스포츠</li>
+      <li>영화</li>
+      <li>웹툰</li>
+    </ul>
+  </div>
+
+  <!--
+    float - 정렬,
+    display:block;  가로방향으로 브라우저의 전체를 영역으로 표시하는 방법
+                    display block을 가진 해당 태그 앞뒤로 줄바꿈(엔터)을 생성
+    display:inline; 태그의 앞뒤로 줄바꿈을 생성하지 않는다.너비 높이가 적용되지않는다.태그내부의 컨텐츠(텍스트,이미지,동영상 등등)크기 만큼만 적용된다.
+    display:inline-block; inline처럼 줄바꿈이 생성되지 않지만 너비,높이를 적용할 수 있다.
+    display:none; display를 사용하지 않게 된다. 즉, 화면에 표시하지않는다. display는 화면에 어떻게 표시할것인지를 정하는 속성이다.
+  -->
+</body>
+</html>
