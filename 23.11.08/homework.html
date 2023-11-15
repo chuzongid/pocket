@@ -1,3 +1,4 @@
+<!--  div1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,53 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./static/css/homework.css">
+    <style>
+        #box1{
+            width:400px;
+            height:300px;
+            border:1px solid red;
+            background-color: seagreen;
+            border-radius: 20px;
+            padding:20px 100px;
+            margin-top:100px;
+        }
+        #box2{
+            width:200px;
+            height:100px;
+            background: mediumorchid;
+            margin-top:-220px;
+            margin-left:200px;
+        }
+        #box3{
+            box-sizing: border-box; /* 안쪽여백, 테두리선에 의해 크기가 변하지않는다. */
+            width:500px;
+            /*height:400px; */
+            background:tomato;
+            padding:150px 175px;
+        }
+        #box4{
+            
+        }
+    
+    </style>
+
 </head>
 <body>
-
-    <div id="wrap">
-        <header id="header">
-            <div class="logoWrap">
-                <img src="https://loremflickr.com/100/50/STARBUCKS" alt="logoimage"
-            </div>
-            <div class="menuWrap">
-                <nav>
-                    <div class="menu">COFFEE</div>
-                    <div class="menu">MENU</div>
-                    <div class="menu">STORE</div>
-                    <div class="menu">RESPONSIBILITY</div>
-                    <div class="menu">STARBUCKS REWARDS</div>
-                    <div class="menu">CORPORATE SALES</div>
-                    <div class="menu">WHAT'S NEW</div>
-                </nav>
-            </div>
-        </header>
-        <main id="main">
-
-        </main>
-        <footer id="foot">
-            <p class="footMenu">
-                <b>개인정보처리방침</b>
-                <b>영상정보처리기기 운영관리 방침</b>
-                <b>홈페이지 이용약관</b>
-                <b>위치정보 이용약관</b>
-            </p>
-            <p>    
-                <b>스타벅스 카드 이용약관 </b>
-                <b>신세계 유니버스 클럽 이용약관</b>
-                <b>비회원 이용약관</b>
-                <b>MY DT Pass서비스 이용약관</b>
-                <b>윤리경영 핫라인</b>
-            </p>
-            <address class="addr">
-                사업자등록번호:201-81-21515
-                주식회사 에스씨케이컴퍼티
-                대표이사:손정현
-                TEL:1522-3232
-                개인정보 책임자:이찬우
-            </address>
-        </footer>
-    </div>
     
+    <div id="box1">
+
+    </div>
+    <div id="box2"></div>
+
+    <div id="box3">
+        <div id="box4"></div>
+        <h3>공고중인 보호동물</h3>
+    </div>
+
+    <br><br>
+    <div id="box5">
+        입양 가능 ! 새로운 가족을 기다리고 있어요
+    </div>
+
+    <div id="box6">
+        반려동물 사랑으로 입양하세요
+    </div>
+
+
+    <!-- 
+        태그에 적용할수 있는 여백 
+        안쪽 여백 - padding
+        바깥쪽 여백  - margin
+
+        padding은 안쪽여백을 생성한다.  
+        padding으로 생성된 공간은 내부에서 사용불가이다.(텍스트, 이미지 등등)
+        div 영역 안에 특정 태그의 위치를 이동시키고 다른 공간에 텍스트나 이미지를
+        표현하고자한다면 padding이 아닌 margin으로 이동시켜야 한다.
+
+        padding은 안쪽에 사용 할수 없는 공간을 생성 하는것이다.
+        margin은 기본적으로 사용할수 없는 바깥쪽 공간을 생성하는것이기때문에
+        div 영역 내부에 표시되는 내용에는 영향을 주지 않는다.
+
+        하여  영역 안쪽의 태그들의 위치를 설정 하기위해서는 padding을
+        영역의 화면에서 위치를 설정하기 위해서 margin을 이용한다.
+
+
+
+        div - division
+        div 태그를 이용하여 화면을 분할해서 사용 할 수 있다.
+        메뉴 영역, 사이드영역, 본문영역, 바닥 영역 등등 
+        div 가 가진 css 속성은 단 하나 display:block; 이다.
+        block값은 면적을 의미한다. 
+
+        공간(영역) 태그 
+        p, h123456, div, iframe , 
+        header - 메뉴, 로고, 제목, 머리글
+        main - 페이지내의 중심주제 , 주요내용, 콘텐츠 
+        section - 주제별, 카테고리별 ,테마별 
+        article - 기사, 블로그전체내용,  텍스트 중심의 글
+        footer - 바닥글, 페이지 하단에 정보표현
+        nav - 메뉴
+        aside - 좌측, 우측 사이드 공간
+        figure - 이미지, 다이어그램, 영상 등 독립적인 컨텐츠
+
+    -->
+
 </body>
 </html>
