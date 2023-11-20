@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var user = parseInt(prompt("1~50사이 정수 입력:"));
+        var com = Math.floor(Math.random()*50)+1;
+        var max=50 ;
+        var min=1;
+
+    for(;true;){
+        if(user>com){
+            alert("컴퓨터 값: "+com+  "결과:업");
+            min=com;
+            com = Math.floor(Math.random()*(max-com+1))+(com);
+            
+        }else if(user<com){
+            alert("컴퓨터 값 : "+com+  "결과:다운");
+            max=com;
+            com = Math.floor(Math.random()*(com-min+1))+(min);
+            
+        }else{
+            alert("컴퓨터 값 : "+com+  "결과:정답");
+            break;
+        }
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
