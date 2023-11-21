@@ -6,28 +6,73 @@
     <title>Document</title>
 
     <script>
-        var user = parseInt(prompt("1~50사이 정수 입력:"));
-        var com = Math.floor(Math.random()*50)+1;
-        var max=50 ;
-        var min=1;
+        // var user = parseInt(prompt("1~50사이 정수 입력:"));
+        // var com = Math.floor(Math.random()*50)+1;
+        // var max=50 ;
+        // var min=1;
 
-    for(;true;){
+    // for(;true;){
+    //     if(user>com){
+    //         document.write("<br>컴퓨터 값: "+com+  "결과:업");
+    //         min=com;
+    //         com = Math.floor(Math.random()*(max-(com)+1))+(com);
+            
+    //     }else if(user<com){
+    //         document.write("<br>컴퓨터 값 : "+com+  "결과:다운");
+    //         max=com;
+    //         com = Math.floor(Math.random()*(com-min+1))+(min);
+            
+    //     }else{
+    //         document.write("<br>컴퓨터 값 : "+com+  "결과:정답");
+    //         break;
+    //     }
+    // }
+    //과제풀이
+    // var user=0;
+    
+    // for(;user>=1 && user<=50;){
+    //     user = parseInt(prompt("1~50입력"));
+    // }
+    // var a = 50 , b=1 , max=50;
+    // for(;true;){
+    //     var com = Math.floor(Math.random()*a)+b;
+    //     if(user<com){
+    //         document.write(`다운 (com:${com}) , 범위:${b}~${max}<br>`)
+    //         a=com-1-b+1;
+    //         max=com-1;
+    //     }
+    //     if(user>com){
+    //         document.write(`업 (com:${com}) , 범위:${b}~${max}<br>`)
+    //         b=com+1;
+    //         a=max-b+1;
+    //     }
+    //     if(user==com){
+    //         document.write(`정답`);break;
+    //     }
+    // }
+    var user = parseInt(prompt("1~50정수 입력"));
+
+    var a=1 , b=50;
+    for(;;){
+        var com = Math.floor(Math.random()*b)+a;
+        if(user<com){
+            document.write(`컴퓨터:${com} 사용자:${user}`);
+            
+        }
         if(user>com){
-            alert("컴퓨터 값: "+com+  "결과:업");
-            min=com;
-            com = Math.floor(Math.random()*(max-com+1))+(com);
-            
-        }else if(user<com){
-            alert("컴퓨터 값 : "+com+  "결과:다운");
-            max=com;
-            com = Math.floor(Math.random()*(com-min+1))+(min);
-            
-        }else{
-            alert("컴퓨터 값 : "+com+  "결과:정답");
+            document.write(`컴퓨터:${com} 사용자:${user}`);
+        }
+        if(user==com){
+            document.write(`컴퓨터:${com} 사용자:${user} 정답`);
             break;
         }
     }
     hhgg
+
+
+
+
+
 
     </script>
 </head>
