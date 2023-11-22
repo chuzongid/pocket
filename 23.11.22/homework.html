@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
         // 과제!!!
         // 인구조사!!
@@ -19,35 +20,73 @@
 
         // 총원 10명 : 노인 2명, 성인 5명, 청소년 2명, 아동 3명
         
-        var old=0 , adult=0 , youth=0 , child=0;
-        do{
-            var age = parseInt(prompt("나이 입력"));
-            if(age==0){
-                break;
+        // var old=0 , adult=0 , youth=0 , child=0;
+        // do{
+        //     var age = parseInt(prompt("나이 입력"));
+        //     if(age==0){
+        //         break;
+        //     }
+        //     if(age>=65){
+        //         old++
+        //     }
+        //     if(age>=20 && age<=64){
+        //         adult++
+        //     }
+        //     if(age>=8 && age<=19){
+        //         youth++
+        //     }
+        //     if(age>=1 && age <=7){
+        //         child++
+        //     }
+        // }while(true);
+        // document.write("노인:65세 이상<br>");
+        // document.write("성인:20세~64세<br>");
+        // document.write("청소년:8세~19세<br>");
+        // document.write("아동:1세~7세<br>");
+        // document.write(`총원 ${old+adult+youth+child}명 노인:${old}명 성인:${adult}명 청소년:${youth}명 아동:${child}명`);
+    
+        var old=0 , adult=0, teen=0, child=0, count=0;
+
+        var end=true; //구성원 나이를 입력 가능 또는 입력 불가능 하게 만들기위한 변수
+
+        function survey(){
+            if(end){
+                var age = Number($("#age").val());
+                if(age>=65) old++;
+                else if(age>=20 && age<=64) adult++;
+                else if(age>=8 && age<=19) teen++;
+                else if(age>=1 && age<=7) child++;
+                else if(age==0){
+                    end=false;
+                    count--;
+                }
+                    
             }
-            if(age>=65){
-                old++
-            }
-            if(age>=20 && age<=64){
-                adult++
-            }
-            if(age>=8 && age<=19){
-                youth++
-            }
-            if(age>=1 && age <=7){
-                child++
-            }
-        }while(true);
-        document.write("노인:65세 이상<br>");
-        document.write("성인:20세~64세<br>");
-        document.write("청소년:8세~19세<br>");
-        document.write("아동:1세~7세<br>");
-        document.write(`노인:${old}명 성인:${adult}명 청소년:${youth}명 아동:${child}명`);
+            count++;
+            $("#result").html(
+                `총원:${count}명 : 노인${old}명 , 성인${adult}명 , 청소년${teen}명 , 아동${child}명`
+            );
+        }
+        //linter 도구 자바스크립트 스타일 가이드를 얼마나 준수 작성 확인 및 개선,제안
+        //jslint jshint eslint airbnb style code google javascript style prettier
+        
+
 
     </script>
+    <style>
+    input{width:50px;}
+    
+    </style>
 
 </head>
 <body>
-    
+    <input type="number" id="age" min="0" max="110"><button onclick="survey()">입력</button>
+
+
+    <!-- <input type="text" id="num2"> -->
+    <!-- <input type="text" id="num3"> -->
+    <!-- <button onclick="find()">실행</button> -->
+
+    <div id="result"></div>
 </body>
 </html>
