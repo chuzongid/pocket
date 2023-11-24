@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="./static/javascript/arr6.js"></script>
+  <script>
+
+
+  //id가 name인곳에 이름을 입력하여 성적조회버튼을 클릭한다.
+
+  //입력한 이름의 학생 성적을 국어:00점 수학:00점 영어:00점 평균:00점 출력하세요
+
+  //이름이 없는 학생 검색시 등록되지않은 학생입니다.출력
+
+  //id가 avg인곳에 평균 점수를 입력하고 검색 버튼 클릭
+
+  //입력한 평균 점수 이상인 학생들의 이름을 출력하세요.
+
+  //해당되는 학생이 한명도 없을시 조건에 맞는 학생이 없습니다.출력
+
+  </script>
+</head>
+<body>
+  <div>
+    <input type="text" id="name"><button onclick="search()">성적조회</button>
+  </div>
+
+  <div>
+    <input type="text" id="avg"><button onclick="over()">검색</button>
+  </div>
+  <div id="result"></div>
+</body>
+</html>
