@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #loading1{
+        width:50px;
+        height:50px;
+        background:orange;
+        position:absolute;
+        top:calc( 50% - 25px);
+        left:calc( 40% - 25px);
+        border-radius:100%;
+        animation:loading1 3s ease infinite normal;
+    }
+    
+    /* #loading2{
+        width:30px;
+        height:30px;
+        background:white;
+        position:absolute;
+        top:calc( 50% - 15px);
+        left:calc( 40% - 15px);
+        border-radius:100%;
+        animation:loading2 4s infinite alternate;
+    }*/
+
+    #loading3{
+        width:350px;
+        height:40px;
+        background:white;
+        border:2px solid orange;
+        border-radius:20px;
+        position:absolute;
+        top:calc( 50% - 20px);
+        left:calc( 50% - 175px);
+    }
+    #waiting{
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        margin-top:280px;
+        
+    }
+
+    @keyframes loading1{
+        0%{left:calc( 40% - 25px);}
+        50%{left:calc( 50% - 25px);}
+        100%{left:calc( 60% - 25px);}
+    }
+    @keyframes loading2{
+        0%{left:calc( 40% - 15px);}
+        50%{left:calc( 50% - 15px);}
+        100%{left:calc( 60% - 15px);}
+    }
+    
+</style>
+<body>
+    <div id="loading3"></div>
+    <div id="loading1"></div>
+    <div id="loading2"></div>
+    <div id="waiting">
+        <h3>로딩 중..</h3>
+    </div>
+
+    
+   
+</body>
+</html>

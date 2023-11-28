@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #email{
+            border-style:solid;
+        }
+        #email:valid{
+            border-style:yellow;
+        }
+        #email:invalid{
+            border-style:blue;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="login_check.jsp">
+        <input type="text" name="text1" placeholder="이름입력">이름입력<br>
+        <input type="password" name="pass"><br>
+        <input type="number" name="age" min="1" max="10"><br>
+        <input type="color" name="mycolor"><br>
+        <input type="date" name="today" value="2023-11-28" min="2003-01-01" max="2024-12-26"><br>
+        <input type="month" name="todayMonth" min="2000-01"><br>
+        <input type="datetime-local" name="todaytime"><br>
+        <label>Gmail 주소를 입력하세요
+            <input type="email" name="email" id="email" pattern="@gmail.com" placeholder="Example@gmail.com"><br>
+        </label>
+        <input type="image" name="image" src="https://loremflickr.com/200/200/girl"><br>
+        <input type="button" value="가입"><br>
+        <input type="submit" value="전송"><br>
+        <input type="reset" value="작성취소"><br>
+        <input type="time" name="time"><br>
+        <input type="week" name="week"><br>
+        <input type="tel" name="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+        <input type="url" name="nowurl"><br>
+        <input type="range" name="width" min="100" max="200" step="10"><br>
+        <input type="checkbox" name="interest" value="축구">축구
+        <input type="checkbox" name="interest" value="야구">야구
+        <input type="checkbox" name="interest" value="농구">농구
+        <input type="radio" name="gender" value="남">남자
+        <input type="radio" name="gender" value="여">여자<br>
+        <input type="file"  name="youimg"><br>
+        <input type="hidden" name="ids" value="1"><br>
+
+        <textarea name="memo"></textarea><br>
+        <select name="game">
+            <option value="lol">롤</option>
+            <option value="fifa">피파온라인</option>
+            <option value="gta">gta</option>
+            <option value="gta">gta</option>
+            <option value="gta">gta</option>
+        </select><br>
+
+        <input list="lang">
+        <datalist id="lang">
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="java">java</option>
+
+        </datalist><br>
+    </form>
+
+    <form oninput="res.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" name="a">+
+        <input type="number" id="b" name="b">=
+        <output name="res" for="a b"></output>
+    </form>
+
+        
+    
+</body>
+</html>
