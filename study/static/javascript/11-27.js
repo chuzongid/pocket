@@ -76,5 +76,24 @@ $(function(){
         }
     });
 
+    var v = $("#route").val();
+    alert(v);
+
+    $("#route option").eq(1).prop("selected",true);
+
+    // var chk = $(".ability_list").eq(0).is(":checked");
+    // alert(chk);
+
+    var len = $(".ability_list:checked").length;
+    alert(len);
+
+    let chk='';
+    $.each($(".ability_list:checked"),function(){
+        chk += $(this).val()+" ";
+    })
+    alert(chk);
+
+
+
 
 });
