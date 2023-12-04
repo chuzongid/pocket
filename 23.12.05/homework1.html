@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        function get(){
+            var fg1 = Number($("#bs1").val());
+            var fg2 = Number($("#bs2").val());
+            var fg3 = Number($("#bs3").val().replace(/[^0-9\.]/g,""));
+            
+            $("#result").html("");
+            check(fg1,fg2,fg3);
+
+        }
+        function check(a,b,c){
+            if(a>=70 && a<=100){
+                $("#result").append("공복 혈당 : 정상<br>");
+            }else if(a<70 || a>100){
+                $("#result").append("공복 혈당 : 문제<br>");
+            }
+            if(b>=90 && b<=140){
+                $("#result").append("식후 2시간 후 혈당 : 정상<br>");
+            }else if(b<90 || b>140){
+                $("#result").append("식후 2시간 후 혈당 : 문제<br>");
+            }
+            if(c>=5.7 && c<6.5){
+                $("#result").append("당화 혈색소 : 정상<br>");
+            }else if(c<5.7 || c>6.5){
+                $("#result").append("담화 혈색소 : 문제<br>");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" name="bs1" id="bs1" placeholder="공복혈당">
+    <br>
+    <input type="text" name="bs2" id="bs2" placeholder="식후 2시간 혈당">
+    <br>
+    <input type="text" name="bs3" id="bs3" placeholder="당화혈색소(%)">
+    <br>
+    <button onclick="get()">혈당 체크</button>
+    <br>
+    
+    <div id="result"></div>
+</body>
+</html>

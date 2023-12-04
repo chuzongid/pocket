@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        function BMI(){
+            var weight = parseFloat($("#weight").val());
+            var height = parseFloat($("#height").val());
+            var BMI = parseFloat(weight /((height/100)*(height/100)));
+
+            console.log(BMI);
+            if(BMI<18.5){
+                $("#result").html("저체중");
+            }else if(BMI>=18.5 && BMI<23){
+                $("#result").html("정상");
+            }else if(BMI>=23 && BMI<25){
+                $("#result").html("과체중");
+            }else if(BMI>=25){
+                $("#result").html("비만");
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="text" name="weight" id="weight" placeholder="몸무게(kg)">
+    <input type="text" name="height" id="height" placeholder="키(cm)">
+    <button onclick="BMI()">BMI 측정</button>
+    <div id="result"></div>
+
+    
+</body>
+</html>
