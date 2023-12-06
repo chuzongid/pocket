@@ -7,7 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <script src="./static/javascript/function3.js"></script>
   <style>
-    #wrap{
+    /*#wrap{
       display:grid;
       width:500px;
       grid-template-columns:repeat(4,1fr);
@@ -32,16 +32,60 @@
       border-bottom:1px solid black;
       padding-left : 10px;
       padding-bottom : 10px;
-    }
+    }*/
   </style>
+  <link rel="stylesheet" href="./static/css/game.css">
+  <script src="./static/javascript/game.js"></script>
 </head>
-<body>
+<body> 
+  <div id="screen">
+
+    <div id="comView">
+      <div class="com">
+        <img id="comImg">
+      </div>
+    </div>
+
+    <div id="userView">
+      <div class="user scissors"><img src="./static/image/scissors.png" alt="가위"></div>
+      <div class="user rock"><img src="./static/image/rock.png" alt="바위"></div>
+      <div class="user paper"><img src="./static/image/paper.png" alt="보"></div>
+    </div>
+
+    <div id="result">
+      <div class="bt"><button id="start">시작</button></div>
+      <div class="res"></div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- 계산기 
   dataset -> data-이름 = '데이터(값)'
 
 
    -->
-  <div id="wrap">
+  <!-- <div id="wrap">
     <div class="item" data-value="7">7</div>
     <div class="item" data-value="8">8</div>
     <div class="item" data-value="9">9</div>
@@ -59,6 +103,6 @@
     <div class="item" data-value="%">%</div>
   </div>
 
-  <div id="res"></div>
+  <div id="res"></div> -->
 </body>
 </html>
