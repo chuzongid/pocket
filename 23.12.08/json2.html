@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  td{
+      text-align:center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+  $.getJSON("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=cbfdaea7f0ceb99a491073bf723f0766&targetDt=20231203",function(data){
+    let movie = data.boxOfficeResult.weeklyBoxOfficeList;
+    view(movie);
+    // console.log(movie[8].movieNm);
+  });
+
+  function view(movie){
+    var table = `<table style = 'width:1000px';>`;
+        table += `<thead> 
+                    <tr> 
+                      <td> 순위 </td> 
+                      <td> 영화 </td>
+                      <td> 누적관객 </td> 
+                      <td> 매출액 </td> 
+                    </tr> 
+                  </thead> `;
+    for(var mv of movie){
+        table +=`<tr>
+                    <td>${mv.rank}</td>
+                    <td>${mv.movieNm}</td>
+                    <td>${Number(mv.audiAcc).toLocaleString()}명</td>
+                    <td>${Number(mv.salesAcc).toLocaleString()}원</td>
+                 </tr>`;
+    }
+    table +="</table>";
+    $("#res").html(table);
+  }
+
+  </script>
+</head>
+<body>
+  <div id="res"></div>
+  
+</body>
+</html>
