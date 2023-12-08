@@ -12,9 +12,21 @@
 
     function update(){
       var td = $(this);
-      var bt = `<button class="modify">수정</button>`;              
+      var bt = `<button class="modify">수정</button>`;
+      var htmlTag = makeHtml(td);
+      
+      td.html(bt);
     }
 
+    function makeHtml(td){
+      var td_text = td.text();
+      var type = "text";
+      if(td.hasClass("payment")){
+
+      }else{
+        htmlTag = `<input type='${type}' value='${td_text}'>`
+      }
+    }
 
 
 
