@@ -1,4 +1,4 @@
-let color ="";  //선택한 색 저장(rgb 값 저장)
+ let color ="";  //선택한 색 저장(rgb 값 저장)
 
 $(function(){
   $("#apply").on("click",paint);

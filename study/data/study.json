@@ -1,0 +1,29 @@
+{
+    "mother" : {
+        "name" : "임재경" ,
+        "age" : "52" ,
+        "job" : "cosmetics" ,
+        "hobby" : "netflix"
+    } ,
+
+    "father" : {
+        "name" : "서종철" ,
+        "age" : "52" ,
+        "job" : "driver" ,
+        "hobby" : "climb"
+    },
+
+    "son" : {
+        "name" : "서종우" ,
+        "age" : "23" ,
+        "job" : "student" ,
+        "hobby" : "game"
+    } ,
+
+    "daughter" : {
+        "name" : "서수진" ,
+        "age" : "19" ,
+        "job" : "student" ,
+        "hobby" :"play"
+    }
+}

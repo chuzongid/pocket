@@ -1,52 +1,52 @@
-// let oldNum = 0; //연산자 클릭 이전의 숫자 저장 변수
-// let op ='';     //클릭한 연산자 저장변수
-// let nowNum = 0; //최근에 클릭한 숫자 저장 변수
+let oldNum = 0; //연산자 클릭 이전의 숫자 저장 변수
+let op ='';     //클릭한 연산자 저장변수
+let nowNum = 0; //최근에 클릭한 숫자 저장 변수
 
 
-// $(function(){
-//   $(".item").on("click",input);
-// });
+$(function(){
+  $(".item").on("click",input);
+});
 
-// function input(){                         //버튼 클릭시 함수 실행
-//   var div = $(this);                      //클릭한 div태그    
-//   var data = div.data("value"); 
+function input(){                         //버튼 클릭시 함수 실행
+  var div = $(this);                      //클릭한 div태그    
+  var data = div.data("value"); 
 
-//   data = (data === "=" )? calc() : operand( data , isNaN( data ) );
+  data = (data === "=" )? calc() : operand( data , isNaN( data ) );
    
   
-//   $("#res").append(data);
+  $("#res").append(data);
   
 
-// }
+}
 
-// function calc(){  //=요녀석을 클릭하면 oldNum과 nowNum을 op에맞춰서 계산
-//   $("#res").empty();
-//   switch( op ){
-//     case "+" :
-//       return nowNum = oldNum + nowNum;
-//     case "-" :
-//       return nowNum = oldNum - nowNum;
-//     case "*" :
-//       return nowNum = oldNum * nowNum;
-//     case "/" :
-//       return nowNum = oldNum / nowNum;
-//   }
+function calc(){  //=요녀석을 클릭하면 oldNum과 nowNum을 op에맞춰서 계산
+  $("#res").empty();
+  switch( op ){
+    case "+" :
+      return nowNum = oldNum + nowNum;
+    case "-" :
+      return nowNum = oldNum - nowNum;
+    case "*" :
+      return nowNum = oldNum * nowNum;
+    case "/" :
+      return nowNum = oldNum / nowNum;
+  }
 
-// }  
+}  
     
   
 
 
-// function operand( d , isN ){
-//   if( isNaN ( d ) ) {                       //false면 숫자 true면 숫자변환불가
-//     op = d ;                                //클릭한 연산자를 op에 저장
-//     oldNum = nowNum ;
-//     nowNum = 0;                         
-//   }else{
-//     nowNum = nowNum * 10 + Number( d ) ;             
-//   }
-//   return d ;
-// }
+function operand( d , isN ){
+  if( isNaN ( d ) ) {                       //false면 숫자 true면 숫자변환불가
+    op = d ;                                //클릭한 연산자를 op에 저장
+    oldNum = nowNum ;
+    nowNum = 0;                         
+  }else{
+    nowNum = nowNum * 10 + Number( d ) ;             
+  }
+  return d ;
+}
 
 /*
   과제
