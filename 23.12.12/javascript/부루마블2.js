@@ -41,6 +41,8 @@ function meeple_move(){ //주사위 값에 따라 말을 움직이기
     var dice_sum = dice1[1] + dice2[1]+2;
     var old_location = gamer.location;  // 현재 위치(이동전);
 
+
+
     //플레이어 위치 변경
     if( gamer.location+dice_sum >31){   //주사위 값이 이동할 위치가 대전위치를 넘는다면
         var diff = gamer.location + dice_sum - 31;
